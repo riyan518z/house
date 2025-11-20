@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+</head>
+<body>
+    <h2>Enter House Details</h2>
+    <form method="POST" action="/predict">
+        <label>No of Bedrooms:</label><br>
+        <input type="text" name="bedrooms"><br><br>
+
+        <label>No of Bathrooms:</label><br>
+        <input type="text" name="bathrooms"><br><br>
+
+        <label>Flat Area (in Sqft):</label><br>
+        <input type="text" name="flat_area"><br><br>
+
+        <label>Lot Area (in Sqft):</label><br>
+        <input type="text" name="lot_area"><br><br>
+
+        <label>No of Floors:</label><br>
+        <input type="text" name="floors"><br><br>
+
+        <label>Waterfront View (0 or 1):</label><br>
+        <input type="text" name="waterfront"><br><br>
+
+        <label>Condition of the House (1-5):</label><br>
+        <input type="text" name="condition"><br><br>
+
+        <label>Overall Grade (1-10):</label><br>
+        <input type="text" name="grade"><br><br>
+
+        <label>Age of House (in Years):</label><br>
+        <input type="text" name="age"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
